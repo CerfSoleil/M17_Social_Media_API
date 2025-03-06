@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "target": "es2017",                       // JavaScript version to compile to
+      "module": "es2022",                   // Module system to use
+      "outDir": "./dist",                     // Output directory for compiled files
+      "rootDir": "./src",                     // Root directory for source files
+      "esModuleInterop": true,                // Ensures compatibility with non-ESM modules
+      "strict": true                          // Enables strict type-checking options
+    },
+    "include": [
+      "src/**/*"                              // Include all files in the src folder
+    ]
+  }
+  
