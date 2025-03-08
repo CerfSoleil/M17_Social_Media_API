@@ -46,7 +46,7 @@ export const createThought = async (req: Request, res: Response): Promise<void> 
             res.status(400).json({ message: 'Missing required fields' });
             return;
         }
-        const thought = await Thought.create({ thoughtText, username });
+        const thought = await Thought.create({ thoughtText, username, userId });
         await User.findByIdAndUpdate(userId, { $push: { thoughts: thought._id } });
         res.status(201).json(formatThought(thought));
     } catch (err) {
