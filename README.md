@@ -44,6 +44,10 @@
   * Post/Delete routes for reactions
   * Post/Delete routes for friends
 
+The following video shows Get/Post/Put/Delete routes for thoughts and users
+https://github.com/user-attachments/assets/7adf6b38-be0c-4a5f-b537-d1846b7a8dfd
+
+
 
   ## Documentation
 
