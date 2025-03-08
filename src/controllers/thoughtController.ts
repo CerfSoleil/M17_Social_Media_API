@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { format } from 'date-fns';
 import Thought from '../models/Thoughts.js';
-import User from '../models/User';
+import User from '../models/User.js';
 import { IThought } from '../models/Thoughts.js';
 import { IReaction } from '../models/schema/Reaction.js';
 

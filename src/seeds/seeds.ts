@@ -1,4 +1,4 @@
-import mongoose, { Types } from 'mongoose';
+import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import { User, Thought } from '../models/index.js';
 
@@ -22,14 +22,39 @@ const seedUsers = async (): Promise<void> => {
 
         const createdUsers = await User.insertMany(usersData);
 //The problem currently resides here:
-        const thoughtsData = [
-            { thoughtText: 'Here comes a thought... That might alarm you.', username: createdUsers[0].username._id as Types.ObjectId },
-            { thoughtText: 'This is another test thought', username: createdUsers[1].username },
-            { thoughtText: 'This is a thought by John Doe', username: createdUsers[2].username },
-            { thoughtText: 'This is a thought by Jane Smith', username: createdUsers[3].username },
-            { thoughtText: 'Sanja pulls these thoughts', username: createdUsers[4].username._id },
-            { thoughtText: 'Moana sails', username: createdUsers[5].username },
-        ];
+const thoughtsData = [
+    { 
+        thoughtText: 'Here comes a thought... That might alarm you.', 
+        username: createdUsers[0].username,  // Keep username as a string
+        userId: createdUsers[0]._id // Ensure you have a userId
+    },
+    { 
+        thoughtText: 'This is another test thought', 
+        username: createdUsers[1].username,
+        userId: createdUsers[1]._id
+    },
+    { 
+        thoughtText: 'This is a thought by John Doe', 
+        username: createdUsers[2].username,
+        userId: createdUsers[2]._id
+    },
+    { 
+        thoughtText: 'This is a thought by Jane Smith', 
+        username: createdUsers[3].username,
+        userId: createdUsers[3]._id
+    },
+    { 
+        thoughtText: 'Sanja pulls these thoughts', 
+        username: createdUsers[4].username,
+        userId: createdUsers[4]._id
+    },
+    { 
+        thoughtText: 'Moana sails', 
+        username: createdUsers[5].username,
+        userId: createdUsers[5]._id
+    },
+];
+
 
         const createdThoughts = await Thought.insertMany(thoughtsData);
 

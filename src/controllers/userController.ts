@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { format } from 'date-fns';
-import { User, Thought } from '../models/index';
+import { User, Thought } from '../models/index.js';
 import { Types } from 'mongoose';
 
 interface IUser {
