@@ -39,12 +39,10 @@
   6. Start the server `npm run start`
   7. View routes in Insomnia or another similar program.
 
-
   ## Usage
-  * ...
-    
-
-
+  * Includes Get/Post/Put/Delete routes for thoughts and users
+  * Post/Delete routes for reactions
+  * Post/Delete routes for friends
 
 
   ## Documentation
